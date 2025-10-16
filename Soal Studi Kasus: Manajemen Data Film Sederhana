@@ -1,0 +1,22 @@
+// Membuat objek menggunakan notasi Object Literal
+const film = {
+  judul: "Interstellar",
+  tahunRilis: 2014,
+  sutradara: "Christopher Nolan",
+  genre: ["Sci-Fi", "Adventure", "Drama"],
+
+  // Method untuk menampilkan detail film
+  tampilkanDetail: function() {
+    return `
+Judul       : ${this.judul}
+Tahun Rilis : ${this.tahunRilis}
+Sutradara   : ${this.sutradara}
+Genre       : ${this.genre.join(", ")}
+    `;
+  }
+};
+
+// Akses dan tampilkan data sesuai soal
+console.log("1. Sutradara:", film.sutradara);
+console.log("2. Genre ke-2:", film.genre[1]);
+console.log("3. Detail Film:\n" + film.tampilkanDetail());
